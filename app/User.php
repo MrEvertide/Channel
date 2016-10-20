@@ -26,4 +26,52 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    /**
+     * Add the Friend relationship to the user's Model
+     *
+     * @return mixed
+     */
+    public function friends() {
+        return $this->belongsToMany('App\User', 'friends_users', 'user_id', 'friend_id')
+            ->select(['id', 'name', 'email']);
+    }
+
+    /**
+     * Add a friend for a user
+     *
+     * @param $friend
+     * @return bool
+     */
+    public function addFriend($friend) {
+        if($this->friends()->attach($friend->id) == 'NULL') {
+            return false;
+        }
+        return true;
+    }
+
+    /**
+     * Get all friends for a user
+     *
+     * @return bool|mixed
+     */
+    public function getFriends() {
+        $friends = $this->friends;
+
+        //TODO clean this part, model should not return mixed type
+        if (count($friends) > 0) {
+            return $friends;
+        } else {
+            return false;
+        }
+    }
+
+    /**
+     * Delete a friend for a user
+     *
+     * @param $friend
+     */
+    public function deleteFriend($friend) {
+        $this->friends()->detach($friend->id);
+    }
 }
