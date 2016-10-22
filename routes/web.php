@@ -24,5 +24,5 @@ Auth::routes();
 Route::get('/home', 'HomeController@index');
 
 Route::get('/friends',["uses"=> "FriendController@index", "as"=> "friends.index"] );
-Route::get('/friends/delete/{id}', ['uses' => "UserController@deleteFriend", "as" => "friend.remove"]);
-Route::post('/friends/add', ['uses' => 'UserController@addFriendPost', 'as' => 'friend.add']);
+Route::get('/friends/delete/{id}', ['uses' => "FriendController@deleteFriend", "as" => "friend.remove"]);
+Route::post('/friends/add', ['uses' => 'FriendController@addFriendPost', 'as' => 'friend.add']);
