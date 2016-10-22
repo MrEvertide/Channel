@@ -35,7 +35,7 @@
                     </button>
 
                     <!-- Branding Image -->
-                    <a class="navbar-brand" href="{{ url('/') }}">
+                    <a class="navbar-brand" href="@if (Auth::guest()) {{ url('/') }} @else {{ url('/home') }} @endif">
                         {{ config('app.name', 'Laravel') }}
                     </a>
                 </div>
