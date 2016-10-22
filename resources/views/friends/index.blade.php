@@ -13,7 +13,7 @@
                               <label for="inputEmail">Email</label>
                               <input class="form-control" type="email" name="inputEmail" value="">
                           </div>
-                          <button type="submit" class="btn btn-default">Submit</button>
+                          <button type="submit" class="btn btn-default">Add friend</button>
                       </form>
                   </div>
              </div>
