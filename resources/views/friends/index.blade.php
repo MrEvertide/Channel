@@ -29,7 +29,7 @@
                             <p>
                                 {{ $friend->name }}
                                 @if($friend->isOnline())
-                                    <span class="icon-online">online</span>
+                                    <i class="fa fa-circle color-online"></i>
                                 @endif
                                 <a href="/friends/delete/{{ $friend->id }}" class="pull-right btn btn-danger">X</a>
                             </p>
