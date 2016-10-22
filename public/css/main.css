@@ -11,3 +11,8 @@
 }
 .alert-info { color: #3097d1; }
 .alert-error { color: #bf5329; }
+.color-online {
+    color: #70c070;
+    margin-left: 10px;
+    font-size: 12px;
+}

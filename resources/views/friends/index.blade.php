@@ -28,6 +28,9 @@
                         @foreach ($friends as $friend)
                             <p>
                                 {{ $friend->name }}
+                                @if($friend->isOnline())
+                                    <i class="fa fa-circle color-online"></i>
+                                @endif
                                 <a href="/friends/delete/{{ $friend->id }}" class="pull-right btn btn-danger">X</a>
                             </p>
                         @endforeach
