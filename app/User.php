@@ -56,6 +56,7 @@ class User extends Authenticatable
      * @return bool|mixed
      */
     public function getFriends() {
+        // call the user's friend propriety and not the friends relation written above
         $friends = $this->friends;
 
         //TODO clean this part, model should not return mixed type
@@ -74,4 +75,5 @@ class User extends Authenticatable
     public function deleteFriend($friend) {
         $this->friends()->detach($friend->id);
     }
+
 }

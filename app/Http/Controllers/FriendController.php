@@ -57,14 +57,26 @@ class FriendController extends Controller
         $email = $request->input("inputEmail");
         $friend = User::where("email", $email)->first();
         if (is_null($friend)) {
-            //TODO throw error, no account found with send email
+            //return an error message (no account found with sent email)
+            $request->session()->flash('alert', 'No account was found with the specified email.');
+            $request->session()->flash('alert-class', 'alert-error');
+            return redirect()->back();
         }
         $user = Auth::user();
 
         if( $user == $friend) {
-            //TODO throw error, the user cant add himself as a friend
+            //return an error message (the user cant add himself as a friend)
+            $request->session()->flash('alert', 'You cannot add yourself as a friend.');
+            $request->session()->flash('alert-class', 'alert-error');
+            return redirect()->back();
         }
-        //TODO validate that the user is not already friend with the other.
+
+        if ( $user->friends->contains($friend->id)) {
+            //return an error message (already friend with the user)
+            $request->session()->flash('alert', 'You are already friend with the specified user.');
+            $request->session()->flash('alert-class', 'alert-error');
+            return redirect()->back();
+        }
 
         $user->addFriend($friend);
         return redirect()->back();
