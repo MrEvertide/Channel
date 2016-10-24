@@ -22,6 +22,7 @@ Route::get('/home', 'HomeController@index');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+Route::get('/settings', ['uses' => 'UserController@settings', 'as' => 'user.settings']);
 
 Route::get('/friends',["uses"=> "FriendController@index", "as"=> "friends.index"] );
 Route::get('/friends/delete/{id}', ['uses' => "FriendController@deleteFriend", "as" => "friend.remove"]);

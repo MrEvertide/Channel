@@ -17,4 +17,13 @@ class UserController extends Controller
     {
         $this->middleware('auth');
     }
+
+    /**
+     * Show the user settings page
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function settings() {
+        return view('user.settings');
+    }
 }
