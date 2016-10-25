@@ -14,7 +14,7 @@ class AddUsersPicture extends Migration
     public function up()
     {
         Schema::table('users', function ($table) {
-            $table->string('picture')->nullable();
+            $table->string('picture')->default('default.jpg');
         });
     }
 
