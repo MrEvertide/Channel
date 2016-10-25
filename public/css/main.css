@@ -16,3 +16,18 @@
     margin-left: 10px;
     font-size: 12px;
 }
+.avatar-small {
+    float: left;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 5px;
+}
+.settings-avatar-image {
+    float: left;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.profile-image { margin-top: 70px; margin-left: 300px; /* TODO: Fix responsive */ }
+.profile-image h2 { text-transform: capitalize; }
