@@ -28,6 +28,12 @@ class UserController extends Controller
         return view('user.settings');
     }
 
+    /**
+     * Post method to handle the avatar picture upload
+     *
+     * @param Request $request
+     * @return mixed
+     */
     public function update_avatar(Request $request) {
         if ($request->hasFile('avatar')) {
             $avatar = $request->file('avatar');
