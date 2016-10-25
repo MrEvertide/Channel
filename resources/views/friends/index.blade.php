@@ -26,13 +26,18 @@
                 <div class="panel-body">
                     @if ($friends)
                         @foreach ($friends as $friend)
-                            <p>
-                                {{ $friend->name }}
-                                @if($friend->isOnline())
-                                    <i class="fa fa-circle color-online"></i>
-                                @endif
-                                <a href="/friends/delete/{{ $friend->id }}" class="pull-right btn btn-danger">X</a>
-                            </p>
+                            <div class="friend-list-user">
+                                <div class="friend-list-user-image">
+                                    <img src="/uploads/avatar/{{$friend->picture}}" alt="profile picture" class="avatar-small">
+                                    @if($friend->isOnline())
+                                        <i class="fa fa-circle color-online"></i>
+                                    @endif
+                                </div>
+                                <div class="friend-list-user-name">
+                                    {{ $friend->name }}
+                                    <a href="/friends/delete/{{ $friend->id }}" class="pull-right btn btn-danger">X</a>
+                                </div>
+                            </div>
                         @endforeach
                     @else
                         <p> Oh, looks like you don't have any friends...</p>
