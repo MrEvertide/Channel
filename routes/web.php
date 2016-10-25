@@ -23,6 +23,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index');
 Route::get('/settings', ['uses' => 'UserController@settings', 'as' => 'user.settings']);
+Route::post('/settings', ['uses' => 'UserController@update_avatar', 'as' => 'user.updateAvatar']);
 
 Route::get('/friends',["uses"=> "FriendController@index", "as"=> "friends.index"] );
 Route::get('/friends/delete/{id}', ['uses' => "FriendController@deleteFriend", "as" => "friend.remove"]);

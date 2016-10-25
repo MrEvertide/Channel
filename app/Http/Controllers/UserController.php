@@ -26,4 +26,8 @@ class UserController extends Controller
     public function settings() {
         return view('user.settings');
     }
+
+    public function update_avatar(Request $request) {
+
+    }
 }
