@@ -21,6 +21,13 @@
     height: 40px;
     border-radius: 50%;
 }
+.dropdown .avatar-small {
+    margin-right: 10px;
+}
+.navbar-nav>li>a {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
 .settings-avatar-image {
     float: left;
     width: 250px;
