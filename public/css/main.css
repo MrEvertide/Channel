@@ -35,7 +35,6 @@
     border-radius: 50%;
 }
 .profile-image { margin-top: 70px; margin-left: 300px; /* TODO: Fix responsive */ }
-.profile-image h2 { text-transform: capitalize; }
 .friend-list-user {
     display: block;
     height: 40px;
