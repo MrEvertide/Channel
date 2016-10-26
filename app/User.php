@@ -16,7 +16,7 @@ class User extends Authenticatable
      * @var array
      */
     protected $fillable = [
-        'name', 'email', 'password',
+        'name', 'email', 'password', 'picture', 
     ];
 
     /**
@@ -45,7 +45,7 @@ class User extends Authenticatable
      */
     public function friends() {
         return $this->belongsToMany('App\User', 'friends_users', 'user_id', 'friend_id')
-            ->select(['id', 'name', 'email']);
+            ->select(['id', 'name', 'email', 'picture']);
     }
 
     /**
