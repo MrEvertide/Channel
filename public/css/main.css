@@ -1,0 +1,61 @@
+/* TODO: add responsiveness to the alert box. */
+.alert {
+    background: #ccc;
+    display: inline;
+    position: absolute;
+    top: -3px;
+    right: 33%;
+    width: 33%;
+    z-index: 2000;
+    text-align: center;
+}
+.alert-info { color: #3097d1; }
+.alert-error { color: #bf5329; }
+.color-online {
+    color: #70c070;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.avatar-small {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.dropdown .avatar-small {
+    margin-right: 10px;
+}
+.navbar-nav>li>a {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+.settings-avatar-image {
+    float: left;
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+}
+.profile-image { margin-top: 70px; margin-left: 300px; /* TODO: Fix responsive */ }
+.friend-list-user {
+    display: block;
+    height: 40px;
+    margin-bottom: 5px;
+}
+.friend-list-user-name {
+    font-size: 17px;
+    text-transform: capitalize;
+    line-height: 40px;
+    margin-left: 50px;
+}
+.friend-list-user-name a {
+    margin-top: 2px;
+}
+.friend-list-user-image {
+    width: 50px;
+    position: absolute;
+}
+.friend-list-user-image i{
+    position: absolute;
+    bottom: 2px;
+    left: 20px;
+}
+.fix-nav { margin-top: 8px; }

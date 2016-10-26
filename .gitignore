@@ -5,3 +5,7 @@
 Homestead.json
 Homestead.yaml
 .env
+
+public/uploads/avatar/*
+!public/uploads/default.jpg
+
