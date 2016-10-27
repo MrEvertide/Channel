@@ -42,6 +42,14 @@
                 </div>
 
                 <div class="collapse navbar-collapse" id="app-navbar-collapse">
+                    <!-- Left menu -->
+                    @if (!Auth::guest())
+                        <ul class="nav navbar-nav">
+                            <li class="fix-nav"><a href="/profile">My Profile</a></li>
+                        </ul>
+                    @endif
+
+                    <!-- Right menu -->
                     <ul class="nav navbar-nav navbar-right">
                         <!-- Authentication Links -->
                         @if (Auth::guest())
