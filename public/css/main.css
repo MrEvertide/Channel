@@ -34,7 +34,7 @@
     height: 250px;
     border-radius: 50%;
 }
-.profile-image { margin-top: 70px; margin-left: 300px; /* TODO: Fix responsive */ }
+.profile-image { margin-top: 105px; margin-left: 300px; /* TODO: Fix responsive */ }
 .friend-list-user {
     display: block;
     height: 40px;
@@ -59,3 +59,8 @@
     left: 20px;
 }
 .fix-nav { margin-top: 8px; }
+.panel-trans {
+    background-color: rgba(0,0,0,.3);
+    border-color: gray;
+    color: #ddd;
+}

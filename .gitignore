@@ -7,5 +7,6 @@ Homestead.yaml
 .env
 
 public/uploads/avatar/*
-!public/uploads/default.jpg
-
+!public/uploads/avatar/default.jpg
+public/uploads/banner/*
+!public/uploads/banner/default.jpg
