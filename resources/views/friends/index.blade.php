@@ -34,7 +34,7 @@
                                     @endif
                                 </div>
                                 <div class="friend-list-user-name">
-                                    {{ $friend->name }}
+                                    <a href="/user/{{$friend->profileId}}">{{ $friend->name }}</a>
                                     <a href="/friends/delete/{{ $friend->id }}" class="pull-right btn btn-danger">X</a>
                                 </div>
                             </div>
