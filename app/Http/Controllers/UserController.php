@@ -67,7 +67,7 @@ class UserController extends Controller
             $user->picture = $filename;
             $user->save();
         }
-        return view('user.settings');
+        return redirect()->back();
     }
 
     /**
@@ -87,6 +87,6 @@ class UserController extends Controller
             $user->banner = $filename;
             $user->save();
         }
-        return view('user.settings');
+        return redirect()->back();
     }
 }
