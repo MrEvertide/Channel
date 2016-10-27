@@ -21,7 +21,7 @@
                 <div class="panel-heading">Change avatar</div>
                 <div class="panel-body">
                     <form enctype="multipart/form-data" action="/settings/avatar" method="POST" class="avatar-form">
-                        <label for="avatar">select a file 300x300 for better results.</label>
+                        <label for="avatar">select a 300x300 file for better results.</label>
                         <input type="file" name="avatar">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <button type="submit" class="pull-right btn btn-sm btn-primary">Upload avatar</button>
@@ -34,7 +34,7 @@
                 <div class="panel-heading">Change your banner</div>
                 <div class="panel-body">
                     <form enctype="multipart/form-data" action="/settings/banner" method="POST" class="avatar-form">
-                        <label for="avatar">select a file 1920x1080 for better results.</label>
+                        <label for="avatar">select a 1920x1080 file for better results.</label>
                         <input type="file" name="banner">
                         <input type="hidden" name="_token" value="{{csrf_token()}}">
                         <button type="submit" class="pull-right btn btn-sm btn-primary">Upload banner</button>
