@@ -46,7 +46,7 @@ class UserController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function userProfile($id) {
-        $user = User::where("email", $id)->first();
+        $user = User::where("profileId", $id)->first();
         return view('user.profile', ['user' => $user]);
     }
 
