@@ -7,6 +7,9 @@
             <img src="/uploads/avatar/{{$user->picture}}" alt="profile picture" class="settings-avatar-image">
             <div class="profile-image">
                 <h2>{{ucfirst($user->name)}}'s Profile</h2>
+                @if (Auth::user() === $user)
+                    <a href="/settings" class="btn btn-sm btn-primary">My settings</a>
+                @endif
             </div>
         </div>
     </div>
