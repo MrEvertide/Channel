@@ -49,6 +49,15 @@ class User extends Authenticatable
     }
 
     /**
+     * Add the Post relationship to the user's Model
+     *
+     * @return mixed
+     */
+    public function posts() {
+        return $this->hasMany('App\Post');
+    }
+
+    /**
      * Add a friend for a user
      *
      * @param $friend
