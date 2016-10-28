@@ -54,7 +54,7 @@ class User extends Authenticatable
      * @return mixed
      */
     public function posts() {
-        return $this->hasMany('App\Post');
+        return $this->hasMany('App\Post')->select(['id', 'content', 'created_at', 'updated_at']);
     }
 
     /**
