@@ -15,7 +15,10 @@ class CreatePostsTable extends Migration
     {
         Schema::create('posts', function (Blueprint $table) {
             $table->increments('id');
+            $table->integer("user_id")->unsigned()->nullable();
+            $table->longText('content');
             $table->timestamps();
+            $table->foreign("user_id")->references("id")->on("users");
         });
     }
 
@@ -26,6 +29,6 @@ class CreatePostsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('posts');
+        Schema::drop('posts');
     }
 }
