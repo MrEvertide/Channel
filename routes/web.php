@@ -28,7 +28,6 @@ Route::post('/settings/banner', ['uses' => 'UserController@updateBanner', 'as' =
 Route::get('/profile', ['uses' => 'UserController@myProfile', 'as' => 'user.myProfile']);
 Route::get('/user/{id}', ['uses' => 'UserController@userProfile', 'as' => 'user.userProfile']);
 Route::get('/post', ['uses' => 'PostController@index', 'as' => 'post.list']);
-Route::get('/post/new', ['uses' => 'PostController@create', 'as' => 'post.create']);
 Route::Post('/post/new', ['uses'=> 'PostController@createPost', 'as' => 'post.createPost']);
 
 

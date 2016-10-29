@@ -30,10 +30,6 @@ class PostController extends Controller
         return view('post/list',['posts' => $posts]);
     }
 
-    public function create() {
-        return view('post/new');
-    }
-
     /**
      * Method used to handle the create post POST request
      *
