@@ -117,7 +117,7 @@ class User extends Authenticatable
      * @return bool
      */
     private function compareDates($first, $second) {
-        return strtolower( $first->created_at) > strtolower($second->created_at);
+        return strtolower( $first->created_at) < strtolower($second->created_at);
     }
 
     /**
