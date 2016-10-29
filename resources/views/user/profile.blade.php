@@ -21,6 +21,8 @@
 <style>
     body { background-image: url({{"/uploads/banner/" . $user->banner}}); }
 </style>
-@include('post.new')
+@if (Auth::user() === $user)
+    @include('post.new')
+@endif
 @include('post.list')
 @endsection
