@@ -96,4 +96,15 @@ class User extends Authenticatable
         $this->friends()->detach($friend->id);
     }
 
+    /**
+     * Method used to return posts from recent to older.
+     *
+     * @param null $limit
+     * @return mixed
+     */
+    public function getRecentPosts($limit = null) {
+        $posts = Post::where('user_id', $this->id)->orderBy('created_at', 'desc')->take($limit)->get();
+        return $posts;
+    }
+
 }
