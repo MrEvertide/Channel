@@ -21,5 +21,6 @@
 <style>
     body { background-image: url({{"/uploads/banner/" . $user->banner}}); }
 </style>
+@include('post.new')
 @include('post.list')
 @endsection
