@@ -19,7 +19,13 @@
     </div>
 </div>
 <style>
-    body { background-image: url({{"/uploads/banner/" . $user->banner}}); }
+    body {
+        background-image: url({{"/uploads/banner/" . $user->banner}});
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 </style>
 @if (Auth::user() === $user)
     @include('post.new')
