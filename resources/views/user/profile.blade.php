@@ -19,6 +19,9 @@
     </div>
 </div>
 <style>
+    /**
+     FIXME: find a better way to implement the profile background and avoid code duplication
+     **/
     body {
         background-image: url({{"/uploads/banner/" . $user->banner}});
         background-size: cover;

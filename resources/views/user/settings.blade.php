@@ -45,6 +45,15 @@
     </div>
 </div>
 <style>
-    body { background-image: url({{"/uploads/banner/" . Auth::user()->banner}}); }
+    /**
+     FIXME: find a better way to implement the profile background and avoid code duplication
+     **/
+    body {
+        background-image: url({{"/uploads/banner/" . Auth::user()->banner}});
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+    }
 </style>
 @endsection
