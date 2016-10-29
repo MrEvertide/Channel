@@ -23,7 +23,7 @@
 </head>
 <body>
     <div id="app">
-        <nav class="navbar navbar-default navbar-static-top">
+        <nav class="navbar navbar-default navbar-fixed-top">
             <div class="container">
                 <div class="navbar-header">
 
@@ -86,7 +86,9 @@
         @if(Session::has('alert'))
             <p class="alert {{ Session::get('alert-class', 'alert-info') }}">{{ Session::get('alert') }}</p>
         @endif
-        @yield('content')
+        <div class="app-content">
+            @yield('content')
+        </div>
     </div>
 
     <!-- Scripts -->
