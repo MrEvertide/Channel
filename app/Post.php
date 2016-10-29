@@ -21,6 +21,14 @@ class Post extends Model
 
 
     /**
+     * @param $id
+     * @return mixed
+     */
+    public function getUser($id) {
+        return User::where('id', $id)->get()->first();
+    }
+
+    /**
      * Method used to parse the date such as created_at and updated_at to a readable format
      *
      * @param $date

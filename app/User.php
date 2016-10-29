@@ -54,7 +54,7 @@ class User extends Authenticatable
      * @return mixed
      */
     public function posts() {
-        return $this->hasMany('App\Post')->select(['id', 'content', 'created_at', 'updated_at']);
+        return $this->hasMany('App\Post')->select(['id', 'content', 'user_id', 'created_at', 'updated_at']);
     }
 
     /**
@@ -85,6 +85,39 @@ class User extends Authenticatable
         } else {
             return false;
         }
+    }
+
+
+    /**
+     * Method used to get all friends posts in the most recent order
+     *
+     * @return array
+     */
+    public function getFriendsPosts() {
+        $friends = $this->friends;
+
+        $posts = [];
+        foreach ($friends as $friend) {
+            $userPosts = $friend->posts;
+            foreach ($userPosts as $userPost) {
+                $posts[] = $userPost;
+            }
+        }
+
+        usort($posts, [$this, 'compareDates']) ;
+
+        return $posts;
+    }
+
+    /**
+     * Method used in the friends posts sorting to receive the posts in the most recent order.
+     *
+     * @param $first
+     * @param $second
+     * @return bool
+     */
+    private function compareDates($first, $second) {
+        return strtolower( $first->created_at) > strtolower($second->created_at);
     }
 
     /**

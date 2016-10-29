@@ -14,4 +14,6 @@
         </div>
     </div>
 </div>
+@include('post.new')
+@include('post.feed')
 @endsection
