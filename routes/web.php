@@ -27,6 +27,10 @@ Route::post('/settings/avatar', ['uses' => 'UserController@updateAvatar', 'as' =
 Route::post('/settings/banner', ['uses' => 'UserController@updateBanner', 'as' => 'user.updateBanner']);
 Route::get('/profile', ['uses' => 'UserController@myProfile', 'as' => 'user.myProfile']);
 Route::get('/user/{id}', ['uses' => 'UserController@userProfile', 'as' => 'user.userProfile']);
+Route::get('/post', ['uses' => 'PostController@index', 'as' => 'post.list']);
+Route::get('/post/new', ['uses' => 'PostController@create', 'as' => 'post.create']);
+Route::Post('/post/new', ['uses'=> 'PostController@createPost', 'as' => 'post.createPost']);
+
 
 Route::get('/friends',["uses"=> "FriendController@index", "as"=> "friends.index"] );
 Route::get('/friends/delete/{id}', ['uses' => "FriendController@deleteFriend", "as" => "friend.remove"]);
