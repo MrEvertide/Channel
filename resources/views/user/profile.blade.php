@@ -18,20 +18,9 @@
         </div>
     </div>
 </div>
-<style>
-    /**
-     FIXME: find a better way to implement the profile background and avoid code duplication
-     **/
-    body {
-        background-image: url({{"/uploads/banner/" . $user->banner}});
-        background-size: cover;
-        background-position: center center;
-        background-repeat: no-repeat;
-        background-attachment: fixed;
-    }
-</style>
 @if (Auth::user() === $user)
     @include('post.new')
 @endif
 @include('post.list')
+@include('user.background')
 @endsection

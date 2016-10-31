@@ -16,4 +16,5 @@
 </div>
 @include('post.new')
 @include('post.feed')
+@include('user.background', ['user' => Auth::user()])
 @endsection
